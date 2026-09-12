@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import productsData from "../data/productsData.json";
 import ComingSoon from "./ComingSoon";

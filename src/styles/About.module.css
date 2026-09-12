@@ -10,7 +10,7 @@
 /* --- Hero Section --- */
 .heroSection {
   position: relative;
-  background-image: url("/src/assets/images/hero_background.png");
+  background-image: url("../../public/images/hero_background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax effect */

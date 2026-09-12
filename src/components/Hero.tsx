@@ -14,7 +14,7 @@ export default function Hero() {
         playsInline
         className={styles.heroVideo}
       >
-        <source src="/src/assets/videos/hero_video.mp4" type="video/mp4" />
+        <source src="../../public/videos/hero_video.mp4" type="video/mp4" />
       </video>
 
       <div className={styles.heroOverlay}></div>
