@@ -1,0 +1,64 @@
+:root {
+  /* Brand Constants */
+  --primary-green: #178a4b;
+  --primary-blue: #3a3a9f;
+  --gradient-accent: linear-gradient(135deg, #178a4b 0%, #3a3a9f 100%);
+
+  /* Default Light Mode Theme Tokens */
+  --bg-main: #f8f9fb;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: rgba(255, 255, 255, 0.8);
+  --bg-badge: rgba(23, 138, 75, 0.08);
+
+  --text-dark: #1a1a1a;
+  --text-muted: #59636f;
+
+  --border-color: rgba(0, 0, 0, 0.08);
+  --glass-border: rgba(0, 0, 0, 0.05);
+
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* 🌙 Dark Mode Theme Tokens Override */
+[data-theme="dark"],
+.dark {
+  --bg-main: #0e1117;
+  --bg-surface: #161b22;
+  --bg-surface-elevated: rgba(22, 27, 34, 0.85);
+  --bg-badge: rgba(23, 138, 75, 0.2);
+
+  --text-dark: #f0f6fc;
+  --text-muted: #8b949e;
+
+  --border-color: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Global Document Reset Base */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Global Utility Classes */
+:global(.box-shadow) {
+  box-shadow: var(--shadow-sm);
+}
+
+:global(.cta-hover) {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+:global(.cta-hover:hover) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}

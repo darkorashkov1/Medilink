@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "code": "TRG-GLV-01",
+    "inStock": true,
+    "categoryKey": {
+      "en": "gloves",
+      "mk": "ракавици"
+    },
+    "image": "/src/assets/products/TRG-GLV-01.jpg",
+    "name": {
+      "en": "Latex Examination Gloves (Powder-Free)",
+      "mk": "Латекс ракавици за преглед (без прав)"
+    },
+    "description": {
+      "en": "High-quality medical grade powder-free latex examination gloves offering optimal tactile sensitivity and protection.",
+      "mk": "Висококвалитетни медицински латекс ракавици без прав за оптимална чувствителност и заштита."
+    }
+  },
+  {
+    "id": "2",
+    "code": "TRG-GLV-05",
+    "inStock": true,
+    "categoryKey": {
+      "en": "syringes",
+      "mk": "шприцеви"
+    },
+    "image": "/src/assets/products/TRG-SYR-05.jpg",
+    "name": {
+      "en": "3-Part Disposable Syringes with Needle (5ml)",
+      "mk": "Триделни шприцеви за еднократна употреба со игла (5ml)"
+    },
+    "description": {
+      "en": "Safe and sterile 3-part disposable syringes equipped with a fine medical needle for precise dosing.",
+      "mk": "Безбедни и стерилни триделни шприцеви за еднократна употреба опремени со прецизна игла."
+    }
+  }
+]

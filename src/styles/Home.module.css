@@ -1,0 +1,193 @@
+.homePage {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* 🚀 HERO SECTION */
+.heroSection {
+  position: relative;
+  padding: 100px 0 80px;
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  overflow: hidden;
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease;
+}
+
+.heroContent {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Category Badge */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary-green);
+  background-color: var(--bg-badge, rgba(23, 138, 75, 0.1));
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+/* Headlines & Body */
+.heroContent h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.heroContent p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+/* 🔘 ACTION BUTTONS GROUP */
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Primary Button */
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(
+    --gradient-accent,
+    linear-gradient(135deg, #178a4b 0%, #2e3192 100%)
+  );
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(58, 58, 159, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(58, 58, 159, 0.3);
+}
+
+/* Secondary Button */
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--bg-surface-elevated, var(--bg-surface));
+  color: var(--text-dark) !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  background: var(--bg-surface);
+  border-color: var(--primary-green);
+  color: var(--primary-green) !important;
+}
+
+/* 📱 RESPONSIVE MEDIA QUERIES */
+@media (max-width: 991px) {
+  .heroSection {
+    padding: 60px 0;
+    min-height: auto;
+  }
+
+  .heroContent {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  .buttonGroup {
+    flex-direction: row;
+    max-width: none;
+    width: auto;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 30px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+}

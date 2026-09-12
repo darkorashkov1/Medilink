@@ -1,0 +1,250 @@
+.contactPage {
+  padding: 60px 0 100px 0;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+.headerSection {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.headerSection h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.headerSection p {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.mainGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+}
+
+/* Left Form Layout Styles */
+.formContainer {
+  flex: 1.3;
+  background: var(--bg-surface);
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.formContainer h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.formSub {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+}
+
+.successBanner {
+  background-color: rgba(23, 138, 75, 0.15);
+  color: var(--primary-green);
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 15px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: var(--bg-main);
+  outline: none;
+  color: var(--text-dark);
+  font-family: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 4px rgba(58, 58, 159, 0.15);
+}
+
+.inputGroup textarea {
+  resize: vertical;
+}
+
+.submitFormButton {
+  padding: 16px 32px;
+  background: var(--gradient-accent);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.submitFormButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(23, 138, 75, 0.2);
+}
+
+/* Right Cards Layout Sidebar Styles */
+.sidebarCards {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.infoCard {
+  background: var(--bg-surface);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-3px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.iconCircle {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-badge);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.infoCard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.infoCard p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.infoCard p:last-child {
+  margin-bottom: 0;
+}
+
+.infoCard a {
+  color: var(--primary-blue);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.infoCard a:hover {
+  color: var(--primary-green);
+}
+
+.closedText {
+  color: #d92d20 !important;
+  font-weight: 500;
+}
+
+/* Tablet Media Breakpoint */
+@media (max-width: 1024px) {
+  .mainGrid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .formContainer,
+  .sidebarCards {
+    width: 100%;
+    flex: none;
+  }
+  .sidebarCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Mobile Media Breakpoint */
+@media (max-width: 768px) {
+  .contactPage {
+    padding: 40px 0 60px 0;
+  }
+  .headerSection {
+    margin-bottom: 40px;
+  }
+  .headerSection h1 {
+    font-size: 32px;
+  }
+  .headerSection p {
+    font-size: 16px;
+  }
+  .formContainer {
+    padding: 30px 20px;
+  }
+  .submitFormButton {
+    width: 100%;
+    text-align: center;
+  }
+  .sidebarCards {
+    grid-template-columns: 1fr;
+  }
+}

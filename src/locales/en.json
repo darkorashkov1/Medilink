@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "logo": "Medilink",
+    "home": "Home",
+    "partners": "Partners",
+    "products": "Products",
+    "about": "About us",
+    "contact": "Contact"
+  },
+"hero": {
+    "badge": "MEDILINK • MEDICAL DISTRIBUTION",
+    "title": "Modern solutions for modern healthcare.",
+    "subtitle": "Reliable partner for import and distribution of medical devices and consumables.",
+    "productsBtn": "Products",
+    "contactBtn": "Contact Us"
+  },
+  "assortment": {
+    "eyebrow": "OFFICIAL ASSORTMENT",
+    "title": "Registered Medical Products",
+    "description": "Medilink is an authorized distributor for the following product categories, fully approved for distribution in North Macedonia.",
+    "items": {
+      "diagnostic": "Diagnostic devices",
+      "infusion": "Infusion therapy",
+      "sutures": "Surgical sutures",
+      "urology": "Urology",
+      "syringes": "Syringes and needles",
+      "exam_gloves": "Examination gloves",
+      "surg_gloves": "Surgical gloves",
+      "transfusion": "Transfusion",
+      "surgery": "Surgery and anesthesia"
+    }
+  },
+  "partner_highlight": {
+    "subtitle": "German Medical Standard",
+    "badge": "STRATEGIC PARTNER",
+    "title": "Direct import from Germany for North Macedonia",
+    "description_part1": "Through collaboration with ",
+    "description_part2": " from Hamburg, Medilink provides products present in over 110 countries worldwide. Visit our partners page for detailed information on authorized range.",
+    "cta": "More about authorization ↗"
+  },
+  "trust_metrics": {
+    "stat1_label": "Registered medical classes",
+    "stat2_label": "German certified quality",
+    "pillar1_title": "Officially Compliant (MALMED)",
+    "pillar1_desc": "Full regulatory compliance and clear documentation for seamless public and private healthcare supply.",
+    "pillar2_title": "Distribution & Logistics",
+    "pillar2_desc": "We ensure continuous inventory flows, safe delivery, and a professional business relationship."
+  },
+  "footer": {
+    "address_title": "Address",
+    "address_line1": "21 Maj st. No. 16",
+    "address_line2": "2000 Shtip, North Macedonia",
+    "email_title": "Email",
+    "contact_title": "Contact",
+    "newsletter_title": "Subscribe to newsletter",
+    "email_placeholder": "Email address",
+    "subscribe_btn": "Subscribe",
+    "success_alert": "Subscription successful!",
+    "error_invalid": "Please enter a valid email address."
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "description": "The requested page was not found. Please continue to the Medilink home page to find what you are looking for.",
+    "back_home": "Back to Home"
+  },
+  "about_page": {
+    "eyebrow": "ABOUT MEDILINK",
+    "title": "Import and distribution of medical devices and consumables for modern healthcare",
+    "story_title": "Our story",
+    "story_p1": "Medilink is a company dedicated to the import and distribution of medical devices and consumables for healthcare institutions, private practices, and other healthcare professionals in North Macedonia.",
+    "story_p2": "Our goal is to build a reliable and professional partnership with healthcare providers, delivering access to high-quality medical products and consistent supply for their daily operations.",
+    "partner_title": "Partnership with Troge Medical",
+    "partner_p1": "As part of our offer, we collaborate with Troge Medical, a German manufacturer and partner in the field of medical devices and consumables. Through this partnership, Medilink provides access to a wide range of products tailored for various medical sectors.",
+    "partner_p2": "Our product portfolio covers protective equipment, surgery, urology, transfusion, infusion therapy, syringes and needles, diagnostics, and other essential medical supplies.",
+    "philosophy_title": "Our approach",
+    "philosophy_p1": "As a growing business, we believe trust is built right from the first interaction. That is why we focus on delivering professional service, prompt communication, and safe, timely deliveries tailored to every partner's requirements.",
+    "philosophy_p2": "Our vision is to progressively expand a reliable network across North Macedonia and become a recognized, trusted supplier of medical supplies.",
+    "motto_quality": "Quality.",
+    "motto_trust": "Trust.",
+    "motto_partnership": "Partnership."
+  },
+  "contact_page": {
+    "title": "Get in touch with us",
+    "description": "We are here to answer all your questions regarding our product range, facility quotes, and stock availability.",
+    "form_title": "Send us your inquiry",
+    "form_subtitle": "Fill out the form below and we will get back to you as soon as possible.",
+    "success_msg": "Your message was sent successfully! We will contact you shortly.",
+    "labels": {
+      "name": "Full name / Organization *",
+      "phone": "Phone number (optional)",
+      "email": "Email address *",
+      "subject": "Inquiry type",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "name": "Enter your full name",
+      "phone": "+389 XX XXX XXX",
+      "email": "example@mail.com",
+      "message": "Write your message here..."
+    },
+    "options": {
+      "offer": "Product quote",
+      "assortment": "Range inquiry",
+      "availability": "Stock availability",
+      "other": "Other"
+    },
+    "submit_btn": "Submit inquiry",
+    "sidebar": {
+      "phone": "Phone",
+      "phone_mob": "Mob",
+      "phone_tel": "Tel",
+      "email": "Email",
+      "address": "Address",
+      "address_line1": "21 Мај st. No. 16",
+      "address_line2": "2000 Shtip, North Macedonia",
+      "hours": "Working Hours",
+      "weekdays": "Monday – Friday:",
+      "hours_val": "08:00 – 16:00",
+      "weekend": "Saturday and Sunday: Closed"
+    }
+  },
+  "partners_page": {
+    "eyebrow": "OFFICIAL DISTRIBUTOR",
+    "title": "Global brands. Registered supply.",
+    "subtitle": "Medilink is a licensed importer and distributor of medical consumables, officially registered with the Agency for Medicines and Medical Devices of North Macedonia (MALMED).",
+    "badge": "Authorized Partner",
+    "origin": "📍 Hamburg, Germany (Represented in 110+ countries)",
+    "brand_bio": "With over 35 years of global healthcare experience, the German brand Troge Medical is synonymous with top German quality and rigorous medical standards.",
+    "website_link": "Visit official website ↗",
+    "portfolio_title": "Officially registered range in North Macedonia:",
+    "categories": {
+      "exam_gloves": {
+        "title": "Examination gloves",
+        "desc": "High-quality non-sterile protective gloves for diagnostic and general healthcare procedures."
+      },
+      "surg_gloves": {
+        "title": "Surgical gloves",
+        "desc": "Sterile anatomical gloves offering optimal protection and tactile sensitivity for operating rooms."
+      },
+      "sutures": {
+        "title": "Surgical sutures",
+        "desc": "Advanced absorbable and non-absorbable wound closure solutions for surgical procedures."
+      },
+      "transfusion": {
+        "title": "Transfusion",
+        "desc": "Specialized safe system sets and bags for blood transfusion and blood derivatives."
+      },
+      "urology": {
+        "title": "Urology",
+        "desc": "Foley balloon catheters, urine collection bags, and auxiliary consumables for urological care."
+      },
+      "syringes": {
+        "title": "Syringes and needles",
+        "desc": "Sterile medical syringes and hypodermic needles crafted for maximum sharpness and reliability."
+      },
+      "infusion": {
+        "title": "Infusion therapy",
+        "desc": "IV cannulas, infusion sets, flow regulators, and dedicated therapy accessories."
+      },
+      "diagnostic": {
+        "title": "Diagnostic devices",
+        "desc": "Precision medical equipment and instruments for primary diagnostics in healthcare environments."
+      },
+      "surgery": {
+        "title": "Surgery and anesthesia",
+        "desc": "Specialized consumables intended for clinical anesthesia and surgical operations."
+      }
+    },
+    "future_title": "Expanding registered portfolio",
+    "future_desc": "We are currently undergoing regulatory registration for additional innovative medical lines and products from leading European partners, strictly adhering to national medical guidelines.",
+    "coming_soon": "Stay tuned for updates and upcoming authorizations"
+  },
+  "products_page": {
+    "badge": "OFFICIAL CATALOG",
+    "title": "Medical supply assortment",
+    "subtitle": "Explore our registered medical devices and supplies compliant with national standards.",
+    "search_placeholder": "Search products by name or category...",
+    "category_all": "All categories",
+    "no_results": "No medical devices match your current filters.",
+    "in_stock": "In stock",
+    "out_of_stock": "Out of stock",
+    "details_btn": "Inquire about product",
+    "construction": {
+      "badge": "STATUS: SORTING INVENTORY",
+      "title": "Coming soon... Page under construction",
+      "desc_part1": "Our digital catalog is connecting with the database of ",
+      "desc_part2": ". We are inputting all 9 approved medical classes to provide an accurate overview.",
+      "back_home": "← Back to Home",
+      "contact_us": "Send inquiry ↗"
+    }
+  }
+}

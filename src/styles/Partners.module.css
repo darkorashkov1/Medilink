@@ -1,0 +1,310 @@
+.partnersPage {
+  background-color: var(--bg-main);
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+.headerHero {
+  padding: 60px 0;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.headerHero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.headerHero p {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.featuredSection {
+  margin-top: 20px;
+}
+
+.spotlightContainer {
+  display: flex;
+  background: var(--bg-surface);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.brandPanel {
+  flex: 1;
+  background: var(--bg-main);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 1px solid var(--border-color);
+}
+
+.badge {
+  background: var(--bg-badge);
+  color: var(--primary-green);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.brandLogoMock {
+  margin-bottom: 24px;
+}
+
+.brandLogoMock h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.brandLogoMock span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
+}
+
+.brandOrigin {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.brandBio {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.brandBio strong {
+  color: var(--text-dark);
+}
+
+.externalLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-green);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.externalLink:hover {
+  color: var(--primary-blue);
+  transform: translateX(3px);
+}
+
+.portfolioPanel {
+  flex: 1.8;
+  padding: 50px;
+}
+
+.portfolioPanel h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.categoryCard {
+  background: var(--bg-main);
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardIndicator {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  bottom: 24px;
+  width: 4px;
+  background: var(--gradient-accent);
+  border-radius: 0 4px 4px 0;
+}
+
+.categoryCard h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  padding-left: 6px;
+}
+
+.categoryCard p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  padding-left: 6px;
+}
+
+.futureSection {
+  margin: 60px;
+}
+
+.futureCard {
+  background: var(--bg-surface);
+  border: 2px dashed var(--border-color);
+  border-radius: 24px;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.futureCard h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.futureCard p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.comingSoonBadge {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  background-color: var(--bg-badge);
+  padding: 8px 18px;
+  border-radius: 50px;
+}
+
+.pulseRadar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+}
+
+.ring {
+  border: 3px solid var(--primary-green);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: radarWave 2s infinite linear;
+  opacity: 0;
+}
+
+@keyframes radarWave {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerHero h1 {
+    font-size: 34px;
+  }
+  .spotlightContainer {
+    flex-direction: column;
+  }
+  .brandPanel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 40px;
+  }
+  .portfolioPanel {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerHero h1 {
+    font-size: 28px;
+  }
+  .headerHero p {
+    font-size: 15px;
+  }
+  .brandPanel,
+  .portfolioPanel {
+    padding: 30px 20px;
+  }
+  .portfolioPanel h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .futureCard {
+    padding: 35px 20px;
+  }
+  .futureCard h3 {
+    font-size: 19px;
+  }
+}

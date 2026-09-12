@@ -1,0 +1,144 @@
+@import "./styles/variables.css";
+
+/* Global reset & base styles */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body,
+#__next,
+#root {
+  min-height: 100vh;
+  max-width: 100%;
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background-color: var(--bg-main, var(--light-bg));
+  color: var(--text-dark);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Headings & Typography Overrides */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", "Roboto", sans-serif;
+  color: var(--text-dark);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* LAYOUT WRAPPERS & CONTAINERS */
+
+main {
+  padding-top: 85px; /* Pushes content down past fixed navigation */
+}
+
+.wrapper85 {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.mTopHeader {
+  margin-top: 78px;
+}
+
+/* Animations & scroll reveals */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pageFadeIn {
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+/* Scroll Reveal Utility */
+.revealOnScroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.revealActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered transition sequence for grid items */
+.revealActive > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.revealActive > *:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.revealActive > *:nth-child(3) {
+  transition-delay: 0.25s;
+}
+.revealActive > *:nth-child(4) {
+  transition-delay: 0.35s;
+}
+.revealActive > *:nth-child(5) {
+  transition-delay: 0.45s;
+}
+.revealActive > *:nth-child(6) {
+  transition-delay: 0.55s;
+}
+
+/* Global breakpoints */
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 70px;
+  }
+
+  .wrapper85 {
+    width: 90%;
+  }
+}

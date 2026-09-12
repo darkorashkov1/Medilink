@@ -1,0 +1,213 @@
+.heroSection {
+  position: relative;
+  padding: 120px 0 100px;
+  display: flex;
+  align-items: center;
+  min-height: 85vh;
+  overflow: hidden;
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease;
+}
+
+/* --- Background Video --- */
+.heroVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Dynamic overlay that adjusts readability for both Light and Dark mode */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(248, 249, 250, 0.7) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+/* 🌙 Dark Mode Overlay & Video Inversion Fix */
+[data-theme="dark"] .heroVideo {
+  filter: brightness(0.35) contrast(1.2) hue-rotate(180deg);
+  opacity: 0.7;
+}
+
+[data-theme="dark"] .heroOverlay {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 15, 25, 0.85) 0%,
+    rgba(15, 23, 42, 0.7) 50%,
+    rgba(10, 15, 25, 0.4) 100%
+  );
+}
+
+/* --- Text Content --- */
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary-green, #178a4b);
+  background-color: var(--bg-badge, rgba(23, 138, 75, 0.08));
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-dark, #1a1a1a);
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.heroContent p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted, #555555);
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+/* --- Action Buttons --- */
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(
+    --gradient-accent,
+    linear-gradient(135deg, #178a4b 0%, #2e3192 100%)
+  );
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(46, 49, 146, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(46, 49, 146, 0.3);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--bg-surface, rgba(255, 255, 255, 0.85));
+  color: var(--text-dark, #1a1a1a) !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  text-decoration: none;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  background: var(--bg-surface);
+  border-color: var(--primary-green, #178a4b);
+  color: var(--primary-green, #178a4b) !important;
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 991px) {
+  .heroSection {
+    padding: 80px 0;
+    min-height: auto;
+  }
+
+  .heroContent {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 30px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+}
