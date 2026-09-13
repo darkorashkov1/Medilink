@@ -1,32 +1,25 @@
-# React + TypeScript + Vite
+# 🏥 Medilink - Medical Equipment & Supplies Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, multi-language React and TypeScript web application built for **Medilink**, featuring a dynamic product catalog, interactive contact forms backed by Formspree, direct phone dialer integrations, and custom hooks.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://medilink-ba3b3.web.app](https://medilink-ba3b3.web.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **🌐 Internationalization (i18next):** Fully supports multiple languages (e.g., English and Macedonian) for seamless user localization.
+- **📱 Direct Click-to-Call Integration:** Mobile-friendly `tel:` and mail-to links ensuring instant user communication channels.
+- **📩 Dynamic Contact & Newsletter Forms:** Powered securely via **Formspree** APIs with automated status handling (submitting, success, and error states).
+- **🎨 Custom UI & Modules:** Built with modular CSS styles, custom scroll animations (`useScrollReveal`), and reusable form submission logic hooks.
+- **⚡ High Performance:** Bundled efficiently using **Vite** and deployed via **Firebase Hosting**.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠️ Tech Stack
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- **Frontend:** React, TypeScript, Vite
+- **Routing & Localization:** React Router, `react-i18next`
+- **Form Handling:** Formspree API, Custom Hooks
+- **Styling:** Modular CSS (`*.module.css`)
+- **Hosting & Deployment:** Firebase Hosting

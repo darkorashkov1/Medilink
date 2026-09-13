@@ -1,0 +1,6 @@
+# Medilink
+> Medilink offers high-quality medical equipment, supplies, and professional healthcare solutions.
+
+## Products & Pages
+- [Products](https://medilink-ba3b3.web.app/products): Browse our catalog of medical equipment and supplies.
+- [Contact Us](https://medilink-ba3b3.web.app/contact): Get in touch with our team for offers and inquiries.
