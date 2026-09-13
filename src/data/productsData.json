@@ -7,7 +7,7 @@
       "en": "gloves",
       "mk": "ракавици"
     },
-    "image": "../../public/products/TRG-GLV-01.jpg",
+    "image": "/products/TRG-GLV-01.jpg",
     "name": {
       "en": "Latex Examination Gloves (Powder-Free)",
       "mk": "Латекс ракавици за преглед (без прав)"
@@ -25,7 +25,7 @@
       "en": "syringes",
       "mk": "шприцеви"
     },
-    "image": "../../public/products/TRG-SYR-05.jpg",
+    "image": "/products/TRG-SYR-05.jpg",
     "name": {
       "en": "3-Part Disposable Syringes with Needle (5ml)",
       "mk": "Триделни шприцеви за еднократна употреба со игла (5ml)"

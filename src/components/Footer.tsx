@@ -69,7 +69,7 @@ export default function Footer() {
         <div className={styles.border}></div>
         <div className={styles.footerContainer}>
           <div className={styles.infoSection}>
-            <img src="../../public/images/logo.png" alt="Logo" width={50} height={50} className={styles.footerLogo} />
+            <img src="/images/logo.png" alt="Logo" width={50} height={50} className={styles.footerLogo} />
             <div className={styles.addressEmailContainer}>
               <div className={styles.infoBlock}>
                 <div className={styles.infoTitle}>{t("footer.address_title")}</div>
@@ -108,13 +108,13 @@ export default function Footer() {
 
             <div className={styles.socialMediaContainer}>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-                <img src="../../public/images/mdi_linkedin.png" alt="LinkedIn" width={28} height={27} />
+                <img src="/images/mdi_linkedin.png" alt="LinkedIn" width={28} height={27} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-                <img src="../../public/images/mdi_instagram.png" alt="Instagram" width={28} height={27} />
+                <img src="/images/mdi_instagram.png" alt="Instagram" width={28} height={27} />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-                <img src="../../public/images/mdi_facebook.png" alt="Facebook" width={28} height={27} />
+                <img src="/images/mdi_facebook.png" alt="Facebook" width={28} height={27} />
               </a>
             </div>
           </div>

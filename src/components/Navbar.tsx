@@ -39,7 +39,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarContainer}>
         <Link className={styles.logo} to="/home">
-          <img src="../../public/images/logo.png" alt="Medilink Logo" width={40} height={40} />
+          <img src="/images/logo.png" alt="Medilink Logo" width={40} height={40} />
           <span>{t("nav.logo", "Medilink")}</span>
         </Link>
 
