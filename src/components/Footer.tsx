@@ -53,7 +53,7 @@ export default function Footer() {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
-        // Keep values or clear them depending on design, matching previous code logic
+        setError("");
       }
     }
 
@@ -82,7 +82,7 @@ export default function Footer() {
               </div>
               <div className={styles.infoBlock}>
                 <div className={styles.infoTitle}>{t("footer.contact_title")}</div>
-                <a href="tel:+38978891418" className={styles.infoDetail} style={{ color: "inherit", textDecoration: "none" }}>+389 70 123 456</a>
+                <a href="tel:+38978891418" className={styles.infoDetail} style={{ color: "inherit", textDecoration: "none" }}>+389 78 891 418 </a>
                 <a href="tel:+38970336989" className={styles.infoDetail} style={{ color: "inherit", textDecoration: "none" }}>+389 70 336 989</a>
               </div>
             </div>
