@@ -65,7 +65,7 @@ button {
 /* LAYOUT WRAPPERS & CONTAINERS */
 
 main {
-  padding-top: 85px; /* Pushes content down past fixed navigation */
+  padding-top: 85px;
 }
 
 .wrapper85 {

@@ -81,7 +81,6 @@
   transition: filter 0.3s ease;
 }
 
-/* Dark theme adjustment for the logo */
 [data-theme="dark"] .brandLogoImage,
 .dark-mode .brandLogoImage {
   filter: brightness(1.08) contrast(1.05);

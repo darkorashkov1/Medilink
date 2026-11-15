@@ -20,7 +20,7 @@
   --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.04);
 }
 
-/* 🌙 Dark Mode Theme Tokens Override */
+/* Dark Mode Theme Tokens Override */
 [data-theme="dark"],
 .dark {
   --bg-main: #0e1117;

@@ -202,7 +202,7 @@
 
 @media (max-width: 768px) {
   .heroSection {
-    background-attachment: scroll; /* Performance fix for mobile devices */
+    background-attachment: scroll;
     padding: 60px 0;
   }
 

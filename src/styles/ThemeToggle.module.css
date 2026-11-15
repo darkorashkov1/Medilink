@@ -44,13 +44,13 @@
 }
 
 .sunIcon {
-  color: #f59e0b; /* Amber warm light */
+  color: #f59e0b;
   opacity: 1;
   transform: rotate(0deg) scale(1);
 }
 
 .moonIcon {
-  color: #818cf8; /* Soft lavender dark */
+  color: #818cf8;
   opacity: 0;
   transform: rotate(-90deg) scale(0.5);
 }

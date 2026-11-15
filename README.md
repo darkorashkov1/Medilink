@@ -2,7 +2,7 @@
 
 A modern, responsive, multi-language React and TypeScript web application built for **Medilink**, featuring a dynamic product catalog, interactive contact forms backed by Formspree, direct phone dialer integrations, and custom hooks.
 
-🔗 **Live Demo:** [https://medilink-ba3b3.web.app](https://medilink-ba3b3.web.app)
+🔗 **Website** [https://medilink.mk](https://medilink.mk)
 
 ---
 

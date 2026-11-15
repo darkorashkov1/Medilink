@@ -10,15 +10,15 @@ import ComingSoon from "./pages/ComingSoon";
 
 export const router = createBrowserRouter([
   {
-    path: "/", // Changed from '' to '/' for clarity
+    path: "/",
     element: <App />,
     children: [
       {
-        index: true, // This makes Home render when you visit http://localhost:5174/
+        index: true, 
         element: <Home />
       },
       {
-        path: "home", // Removed leading slash
+        path: "home",
         element: <Home />
       },
       {

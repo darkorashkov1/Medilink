@@ -24,7 +24,7 @@
     opacity 0.3s ease;
 }
 
-/* Dynamic overlay that adjusts readability for both Light and Dark mode */
+/* Dynamic overlay - Light and Dark mode */
 .heroOverlay {
   position: absolute;
   inset: 0;
@@ -38,7 +38,6 @@
   transition: background 0.3s ease;
 }
 
-/* 🌙 Dark Mode Overlay & Video Inversion Fix */
 [data-theme="dark"] .heroVideo {
   filter: brightness(0.35) contrast(1.2) hue-rotate(180deg);
   opacity: 0.7;

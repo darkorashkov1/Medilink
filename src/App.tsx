@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-// import Services from "./components/Services";
 
 function App() {
   return (
