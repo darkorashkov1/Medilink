@@ -12,7 +12,7 @@ export default function PartnerHighlight() {
       <div className="wrapper85">
         <div className={styles.bannerBox}>
 
-          {/* --- External Link Wrapper for Troge Medical --- */}
+          {/* --- External Link Wrapper for Troge Medical Logo --- */}
           <a
             href="https://www.trogemedical.de/en/"
             target="_blank"
@@ -20,11 +20,14 @@ export default function PartnerHighlight() {
             className={styles.brandLink}
           >
             <div className={styles.brandSlate}>
-              <div className={styles.brandGroup}>
-                <h2>TROGE</h2>
-                <span>Medical GmbH</span>
+              <div className={styles.logoWrapper}>
+                <img 
+                  src="/images/troge-logo.png" 
+                  alt="Troge Medical Hamburg Logo" 
+                  className={styles.brandLogoImage} 
+                />
               </div>
-              <p>{t("partner_highlight.subtitle")}</p>
+              <p className={styles.brandSubtitle}>{t("partner_highlight.subtitle")}</p>
             </div>
           </a>
 

@@ -6,15 +6,51 @@ export default function AssortmentGrid() {
   const { t } = useTranslation();
 
   const registeredItems = [
-    { titleKey: "assortment.items.diagnostic", eng: "Diagnostic devices", colorClass: styles.blueGrad },
-    { titleKey: "assortment.items.infusion", eng: "Infusion therapy", colorClass: styles.greenGrad },
-    { titleKey: "assortment.items.sutures", eng: "Surgical sutures", colorClass: styles.mixGrad },
-    { titleKey: "assortment.items.urology", eng: "Urology", colorClass: styles.blueGrad },
-    { titleKey: "assortment.items.syringes", eng: "Syringes and needles", colorClass: styles.greenGrad },
-    { titleKey: "assortment.items.exam_gloves", eng: "Examination gloves", colorClass: styles.mixGrad },
-    { titleKey: "assortment.items.surg_gloves", eng: "Surgical gloves", colorClass: styles.blueGrad },
-    { titleKey: "assortment.items.transfusion", eng: "Transfusion", colorClass: styles.greenGrad },
-    { titleKey: "assortment.items.surgery", eng: "Surgery and anesthesia", colorClass: styles.mixGrad },
+    { 
+      titleKey: "assortment.items.diagnostic", 
+      eng: "Diagnostic devices", 
+      image: "/images/products_cards/diagnostic_devices.jpg"
+    },
+    { 
+      titleKey: "assortment.items.infusion", 
+      eng: "Infusion therapy", 
+      image: "/images/products_cards/infusion_therapy.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.sutures", 
+      eng: "Surgical sutures", 
+      image: "/images/products_cards/surgical_sutures.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.urology", 
+      eng: "Urology", 
+      image: "/images/products_cards/urology.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.syringes", 
+      eng: "Syringes and needles", 
+      image: "/images/products_cards/syringes_and_needles.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.exam_gloves", 
+      eng: "Examination gloves", 
+      image: "/images/products_cards/examination_gloves.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.surg_gloves", 
+      eng: "Surgical gloves", 
+      image: "/images/products_cards/surgical_gloves.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.transfusion", 
+      eng: "Transfusion", 
+      image: "/images/products_cards/transfusion.jpg" 
+    },
+    { 
+      titleKey: "assortment.items.surgery", 
+      eng: "Surgery and anesthesia", 
+      image: "/images/products_cards/surgery_and_anesthesia.jpg" 
+    },
   ];
 
   return (
@@ -23,15 +59,19 @@ export default function AssortmentGrid() {
         {registeredItems.map((item, index) => (
           <Link key={index} to="/coming-soon" className={styles.productCardLink}>
             <div className={styles.productCard}>
-              <div className={`${styles.graphicHeader} ${item.colorClass}`}>
-                <div className={styles.abstractCircle1} />
-                <div className={styles.abstractCircle2} />
-                <div className={styles.medicalCrossSign} />
+              <div className={styles.imageHeader}>
+                <img 
+                  src={item.image} 
+                  alt={item.eng} 
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "/images/products_cards/placeholder.png";
+                  }}
+                />
               </div>
               <div className={styles.cardContent}>
                 <div className={styles.cardIndicator} />
                 <h3>{t(item.titleKey)}</h3>
-                {/* <span>{item.eng}</span> */}
               </div>
             </div>
           </Link>

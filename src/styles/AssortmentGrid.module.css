@@ -48,6 +48,11 @@
   box-sizing: border-box;
 }
 
+.productCardLink {
+  text-decoration: none;
+  display: block;
+}
+
 /* --- Card Architecture --- */
 .productCard {
   background: var(--bg-surface, #ffffff);
@@ -72,100 +77,25 @@
   border-color: var(--primary-green, #178a4b);
 }
 
-/* --- CSS Header Graphic --- */
-.graphicHeader {
+/* --- Image Header --- */
+.imageHeader {
   position: relative;
   width: 100%;
-  height: 140px;
+  height: 160px;
+  background-color: var(--bg-main, #f8f9fa);
   overflow: hidden;
   flex-shrink: 0;
 }
 
-.blueGrad {
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue, #2e3192) 0%,
-    #4a54df 100%
-  );
-}
-
-.greenGrad {
-  background: linear-gradient(
-    135deg,
-    var(--primary-green, #0d8642) 0%,
-    #178a4b 100%
-  );
-}
-
-.mixGrad {
-  background: var(
-    --gradient-accent,
-    linear-gradient(135deg, #0d8642 0%, #2e3192 100%)
-  );
-}
-
-/* Background circles */
-.abstractCircle1 {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  top: -20px;
-  right: -20px;
+.imageHeader img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.abstractCircle2 {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-  bottom: -10px;
-  left: 10%;
-  transition: transform 0.4s ease;
-}
-
-.medicalCrossSign {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-
-.medicalCrossSign::before,
-.medicalCrossSign::after {
-  content: "";
-  position: absolute;
-  background: #ffffff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 2px;
-}
-
-.medicalCrossSign::before {
-  width: 14px;
-  height: 4px;
-}
-
-.medicalCrossSign::after {
-  width: 4px;
-  height: 14px;
-}
-
-/* Interactive Hover Behavior */
-.productCard:hover .abstractCircle1 {
-  transform: scale(1.15) translate(-5px, 5px);
-}
-
-.productCard:hover .abstractCircle2 {
-  transform: scale(1.2) translate(5px, -5px);
+.productCard:hover .imageHeader img {
+  transform: scale(1.05);
 }
 
 /* --- Card Body Content --- */
@@ -217,8 +147,8 @@
     gap: 20px;
   }
 
-  .graphicHeader {
-    height: 120px;
+  .imageHeader {
+    height: 140px;
   }
 
   .sectionHeader h2 {
@@ -236,8 +166,8 @@
     gap: 20px;
   }
 
-  .graphicHeader {
-    height: 130px;
+  .imageHeader {
+    height: 150px;
   }
 
   .cardContent h3 {

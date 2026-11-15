@@ -107,13 +107,13 @@ export default function Footer() {
             {error && <span className={styles.error}>{error}</span>}
 
             <div className={styles.socialMediaContainer}>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://www.linkedin.com/company/medilink-dooel/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <img src="/images/mdi_linkedin.png" alt="LinkedIn" width={28} height={27} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <img src="/images/mdi_instagram.png" alt="Instagram" width={28} height={27} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://www.facebook.com/people/Medilink/61583381471845" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <img src="/images/mdi_facebook.png" alt="Facebook" width={28} height={27} />
               </a>
             </div>

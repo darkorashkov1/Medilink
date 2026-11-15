@@ -20,7 +20,7 @@
   {
     "id": "2",
     "code": "TRG-SYR-05",
-    "inStock": true,
+    "inStock": false,
     "categoryKey": {
       "en": "syringes",
       "mk": "шприцеви"
@@ -33,6 +33,78 @@
     "description": {
       "en": "Safe and sterile 3-part disposable syringes equipped with a fine medical needle for precise dosing.",
       "mk": "Безбедни и стерилни триделни шприцеви за еднократна употреба опремени со прецизна игла."
+    }
+  },
+  {
+    "id": "3",
+    "code": "TRG-CENTRA-CVC",
+    "inStock": false,
+    "categoryKey": {
+      "en": "infusion",
+      "mk": "инфузија"
+    },
+    "image": "/products/TRO_CENTRA_KIT.png",
+    "name": {
+      "en": "TRO-CENTRAKIT 1-2-3 CVC",
+      "mk": "TRO-CENTRAKIT 1-2-3 CVC катетер"
+    },
+    "description": {
+      "en": "Central venous catheterization kit designed for secure central venous access and long-term infusion therapy.",
+      "mk": "Кит за централна венска катетеризација дизајниран за безбеден централен венски пристап и долготрајна инфузиона терапија."
+    }
+  },
+  {
+    "id": "4",
+    "code": "TRG-SURG-PLUS",
+    "inStock": true,
+    "categoryKey": {
+      "en": "gloves",
+      "mk": "хирургија"
+    },
+    "image": "/products/TRO-Sensosurge_syringe-scaled.jpg",
+    "name": {
+      "en": "TRO-SENSOSURGE PLUS",
+      "mk": "TRO-SENSOSURGE PLUS хируршки ракавици"
+    },
+    "description": {
+      "en": "High-performance surgical gloves engineered for maximum dexterity, safety, and comfort during complex operations.",
+      "mk": "Високоперформансни хируршки ракавици дизајнирани за максимална флексибилност, безбедност и удобност при сложени операции."
+    }
+  },
+  {
+    "id": "5",
+    "code": "TRG-NITRILE-PLUS",
+    "inStock": true,
+    "categoryKey": {
+      "en": "gloves",
+      "mk": "ракавици"
+    },
+    "image": "/products/TRO_Sensosoft_nitrile_plus.jpg",
+    "name": {
+      "en": "TRO-SENSOSOFT NITRILE PLUS",
+      "mk": "TRO-SENSOSOFT NITRILE PLUS ракавици"
+    },
+    "description": {
+      "en": "Extra-soft, powder-free nitrile examination gloves providing superior barrier protection and comfortable fit.",
+      "mk": "Многу меки нитрилни ракавици за преглед без прав кои обезбедуваат врвна бариерна заштита и удобност."
+    }
+  },
+  {
+    "id": "6",
+    "code": "TRG-SUTURES-01",
+    "inStock": false,
+    "categoryKey": {
+      "en": "sutures",
+      "mk": "сутури"
+    },
+    "image": "/products/SuturesUBX.png",
+    "name": {
+      "en": "TRO Surgical Sutures",
+      "mk": "TRO Хируршки конец (сутури)"
+    },
+    "description": {
+      "en": "Premium sterile surgical sutures providing high tensile strength and reliable tissue approximation.",
+      "mk": "Премиум стерилни хируршки конци кои обезбедуваат висока цврстина и сигурна апроксимација на ткивото."
     }
   }
 ]

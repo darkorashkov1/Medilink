@@ -32,9 +32,12 @@ export default function Partners() {
           <div className={styles.spotlightContainer}>
             <div className={styles.brandPanel}>
               <div className={styles.badge}>{t("partners_page.badge")}</div>
-              <div className={styles.brandLogoMock}>
-                <h2>TROGE</h2>
-                <span>Medical GmbH</span>
+              <div className={styles.brandLogoWrapper}>
+                <img
+                  src="/images/troge-logo.png"
+                  alt="Troge Medical GmbH"
+                  className={styles.brandLogoImage}
+                />
               </div>
               <p className={styles.brandOrigin}>{t("partners_page.origin")}</p>
               <p className={styles.brandBio}>{t("partners_page.brand_bio")}</p>

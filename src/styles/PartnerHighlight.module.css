@@ -24,18 +24,41 @@
 .brandSlate {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #10141a 0%, #202b3c 100%);
-  padding: 60px;
+  background-color: #ffffff; /* Clean white background for daylight mode */
+  padding: 2rem;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  color: white;
-  transition: opacity 0.2s ease;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .brandLink:hover .brandSlate {
   opacity: 0.92;
+}
+
+.logoWrapper {
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.brandLogoImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.brandSubtitle {
+  font-size: 0.95rem;
+  color: #555555;
+  margin: 0;
 }
 
 .brandGroup h2 {
@@ -114,6 +137,24 @@
 .ctaButton:hover {
   color: var(--primary-blue);
   transform: translateX(3px);
+}
+
+/* --- Night Mode / Dark Theme Adjustments --- */
+[data-theme="dark"] .brandSlate,
+.dark-mode .brandSlate {
+  background-color: #1e1e1e; /* Dark slate container for night mode */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .brandLogoImage,
+.dark-mode .brandLogoImage {
+  /* Softens the white background box of the image JPEG and pops the logo in dark mode */
+  filter: brightness(0.95) contrast(1.05); 
+}
+
+[data-theme="dark"] .brandSubtitle,
+.dark-mode .brandSubtitle {
+  color: #bbbbbb;
 }
 
 /* Responsive Overrides */
