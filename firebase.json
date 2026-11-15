@@ -12,13 +12,17 @@
         "destination": "/sitemap.xml"
       },
       {
+        "source": "/.well-known/ard.json",
+        "destination": "/.well-known/ard.json"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
     ],
     "headers": [
       {
-        "source": "/assets/**",
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|ico|js|css)",
         "headers": [
           {
             "key": "Cache-Control",

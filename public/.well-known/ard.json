@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "name": "Medilink",
+  "url": "https://medilink.mk/",
+  "description": "Authorized distributor of certified medical equipment and single-use medical devices.",
+  "resources": [
+    {
+      "type": "catalog",
+      "url": "https://medilink.mk/sitemap.xml"
+    }
+  ]
+}
