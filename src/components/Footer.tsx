@@ -110,7 +110,7 @@ export default function Footer() {
               <a href="https://www.linkedin.com/company/medilink-dooel/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <img src="/images/mdi_linkedin.png" alt="LinkedIn" width={28} height={27} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://www.instagram.com/medilinkmak" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <img src="/images/mdi_instagram.png" alt="Instagram" width={28} height={27} />
               </a>
               <a href="https://www.facebook.com/people/Medilink/61583381471845" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
