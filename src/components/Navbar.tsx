@@ -25,6 +25,17 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
   function handleLinkClick() {
     setIsMenuOpen(false);
   }
@@ -52,6 +63,11 @@ export default function Navbar() {
           <span></span>
           <span></span>
         </button>
+
+        <div
+          className={`${styles.backdrop} ${isMenuOpen ? styles.backdropOpen : ""}`}
+          onClick={() => setIsMenuOpen(false)}
+        />
 
         <div className={`${styles.navActions} ${isMenuOpen ? styles.menuOpen : ""}`}>
           <ul className={styles.links}>

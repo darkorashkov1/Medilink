@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import styles from "../styles/Products.module.css";
 
 export interface Product {
@@ -19,6 +20,26 @@ interface ProductCardProps {
 export default function ProductCard({ product, currentLang }: ProductCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    if (!isModalOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setIsModalOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   const name = product.name[currentLang] || product.name["en"];
   const description = product.description[currentLang] || product.description["en"];
   const categoryName = product.categoryKey[currentLang] || product.categoryKey["en"];
@@ -32,7 +53,7 @@ export default function ProductCard({ product, currentLang }: ProductCardProps) 
       {/* Product Card */}
       <div className={styles.productCard} onClick={() => setIsModalOpen(true)}>
         <div className={styles.imageWrapper}>
-          <img src={product.image} alt={name} />
+          <img src={product.image} alt={name} loading="lazy" />
           <span className={`${styles.stockBadge} ${product.inStock ? styles.inStock : styles.outOfStock}`}>
             {product.inStock ? inStockText : outOfStockText}
           </span>
@@ -46,30 +67,36 @@ export default function ProductCard({ product, currentLang }: ProductCardProps) 
         </div>
       </div>
 
-      {/* Modal Window */}
-      {isModalOpen && (
-        <div className={styles.modalOverlay} onClick={() => setIsModalOpen(false)}>
-          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.modalCloseBtn} onClick={() => setIsModalOpen(false)}>
-              &times;
-            </button>
-            <div className={styles.modalBody}>
-              <div className={styles.modalImageWrapper}>
-                <img src={product.image} alt={name} />
-              </div>
-              <div className={styles.modalDetails}>
-                <span className={styles.categoryTag}>{categoryName}</span>
-                <h2>{name}</h2>
-                <span className={styles.productCode}>REF: {product.code}</span>
-                <span className={`${styles.stockBadge} ${product.inStock ? styles.inStock : styles.outOfStock}`}>
-                  {product.inStock ? inStockText : outOfStockText}
-                </span>
-                <p className={styles.modalDescription}>{description}</p>
+      {isModalOpen &&
+        createPortal(
+          <div className={styles.modalOverlay} onClick={() => setIsModalOpen(false)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <button
+                type="button"
+                className={styles.modalCloseBtn}
+                onClick={() => setIsModalOpen(false)}
+                aria-label="Close modal"
+              >
+                ×
+              </button>
+              <div className={styles.modalBody}>
+                <div className={styles.modalImageWrapper}>
+                  <img src={product.image} alt={name} />
+                </div>
+                <div className={styles.modalDetails}>
+                  <span className={styles.categoryTag}>{categoryName}</span>
+                  <h2>{name}</h2>
+                  <span className={styles.productCode}>REF: {product.code}</span>
+                  <span className={`${styles.stockBadge} ${product.inStock ? styles.inStock : styles.outOfStock}`}>
+                    {product.inStock ? inStockText : outOfStockText}
+                  </span>
+                  <p className={styles.modalDescription}>{description}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </>
   );
 }

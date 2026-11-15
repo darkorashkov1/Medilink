@@ -171,7 +171,7 @@ export default function Contact() {
               </a>
               <br/><br/>
               <a href="tel:+38970336989" className={styles.infoDetail} style={{ color: "inherit", textDecoration: "none" }}>
-                {t("contact_page.sidebar.phone_tel")}: <strong>+389 70 336 989</strong>
+                {t("contact_page.sidebar.phone_mob")}: <strong>+389 70 336 989</strong>
               </a>
             </div>
 

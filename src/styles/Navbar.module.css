@@ -99,6 +99,10 @@
   display: none;
 }
 
+.backdrop {
+  display: none;
+}
+
 /* Language Switcher & Controls */
 .langSwitcher {
   display: flex;
@@ -182,6 +186,26 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  .backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 998;
+  }
+
+  .backdropOpen {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .navActions {
     position: fixed;
     top: 0;
@@ -196,6 +220,7 @@
     padding: 100px 40px;
     gap: 30px;
     transition: right 0.3s ease-in-out;
+    z-index: 999;
   }
 
   .menuOpen {
