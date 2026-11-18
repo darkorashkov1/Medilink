@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "titleKey": "assortment.items.diagnostic",
+    "eng": "Diagnostic devices",
+    "image": "/images/products_cards/diagnostic_devices.jpg"
+  },
+  {
+    "id": "2",
+    "titleKey": "assortment.items.infusion",
+    "eng": "Infusion therapy",
+    "image": "/images/products_cards/infusion_therapy.jpg"
+  },
+  {
+    "id": "3",
+    "titleKey": "assortment.items.sutures",
+    "eng": "Surgical sutures",
+    "image": "/images/products_cards/surgical_sutures.jpg"
+  },
+  {
+    "id": "4",
+    "titleKey": "assortment.items.urology",
+    "eng": "Urology",
+    "image": "/images/products_cards/urology.jpg"
+  },
+  {
+    "id": "5",
+    "titleKey": "assortment.items.syringes",
+    "eng": "Syringes and needles",
+    "image": "/images/products_cards/syringes_and_needles.jpg"
+  },
+  {
+    "id": "6",
+    "titleKey": "assortment.items.exam_gloves",
+    "eng": "Examination gloves",
+    "image": "/images/products_cards/examination_gloves.jpg"
+  },
+  {
+    "id": "7",
+    "titleKey": "assortment.items.surg_gloves",
+    "eng": "Surgical gloves",
+    "image": "/images/products_cards/surgical_gloves.jpg"
+  },
+  {
+    "id": "8",
+    "titleKey": "assortment.items.transfusion",
+    "eng": "Transfusion",
+    "image": "/images/products_cards/transfusion.jpg"
+  },
+  {
+    "id": "9",
+    "titleKey": "assortment.items.surgery",
+    "eng": "Surgery and anesthesia",
+    "image": "/images/products_cards/surgery_and_anesthesia.jpg"
+  }
+]

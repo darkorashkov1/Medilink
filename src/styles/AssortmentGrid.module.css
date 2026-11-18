@@ -36,7 +36,6 @@
   color: var(--text-muted, #555555);
 }
 
-/* --- Responsive Grid Engine --- */
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -53,7 +52,7 @@
   display: block;
 }
 
-/* --- Card Architecture --- */
+/* Cards */
 .productCard {
   background: var(--bg-surface, #ffffff);
   border-radius: 20px;
@@ -77,7 +76,7 @@
   border-color: var(--primary-green, #178a4b);
 }
 
-/* --- Image Header --- */
+/* Image Header */
 .imageHeader {
   position: relative;
   width: 100%;
@@ -98,7 +97,7 @@
   transform: scale(1.05);
 }
 
-/* --- Card Body Content --- */
+/* Card Body */
 .cardContent {
   padding: 24px;
   position: relative;
@@ -140,7 +139,9 @@
   padding-left: 10px;
 }
 
-/* --- Responsive Breakpoints --- */
+/* Responsive Breakpoints */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .gridContainer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -156,7 +157,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width: 640px) {
   .gridSection {
     padding: 60px 0;
   }

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "troge",
+    "badgeKey": "partners_page.badge",
+    "logoSrc": "/images/troge-logo.png",
+    "logoAlt": "Troge Medical GmbH",
+    "originKey": "partners_page.origin",
+    "bioKey": "partners_page.brand_bio",
+    "websiteUrl": "https://trogemedical.de",
+    "websiteLinkKey": "partners_page.website_link",
+    "portfolioTitleKey": "partners_page.portfolio_title",
+    "categories": [
+      { "titleKey": "partners_page.categories.exam_gloves.title", "descKey": "partners_page.categories.exam_gloves.desc" },
+      { "titleKey": "partners_page.categories.surg_gloves.title", "descKey": "partners_page.categories.surg_gloves.desc" },
+      { "titleKey": "partners_page.categories.sutures.title", "descKey": "partners_page.categories.sutures.desc" },
+      { "titleKey": "partners_page.categories.transfusion.title", "descKey": "partners_page.categories.transfusion.desc" },
+      { "titleKey": "partners_page.categories.urology.title", "descKey": "partners_page.categories.urology.desc" },
+      { "titleKey": "partners_page.categories.syringes.title", "descKey": "partners_page.categories.syringes.desc" },
+      { "titleKey": "partners_page.categories.infusion.title", "descKey": "partners_page.categories.infusion.desc" },
+      { "titleKey": "partners_page.categories.diagnostic.title", "descKey": "partners_page.categories.diagnostic.desc" },
+      { "titleKey": "partners_page.categories.surgery.title", "descKey": "partners_page.categories.surgery.desc" }
+    ]
+  }
+]

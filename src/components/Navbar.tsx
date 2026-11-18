@@ -4,52 +4,44 @@ import { useTranslation } from "react-i18next";
 import ThemeToggle from "./ThemeToggle";
 import styles from "../styles/Navbar.module.css";
 
+const NAV_ITEMS = [
+  { path: "/home", labelKey: "nav.home" },
+  { path: "/partners", labelKey: "nav.partners" },
+  { path: "/products", labelKey: "nav.products" },
+  { path: "/about", labelKey: "nav.about" },
+];
+
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Handle navbar background change on scroll
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     }
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
-  function handleLinkClick() {
-    setIsMenuOpen(false);
-  }
-
-  function toggleLanguage(lang: string) {
-    i18n.changeLanguage(lang);
-  }
-
+  const closeMenu = () => setIsMenuOpen(false);
+  const toggleLanguage = (lang: string) => i18n.changeLanguage(lang);
   const isMk = i18n.language.startsWith("mk");
 
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarContainer}>
-        <Link className={styles.logo} to="/home">
+        <Link className={styles.logo} to="/home" onClick={closeMenu}>
           <img src="/images/logo.png" alt="Medilink Logo" width={40} height={40} />
           <span>{t("nav.logo", "Medilink")}</span>
         </Link>
@@ -66,47 +58,25 @@ export default function Navbar() {
 
         <div
           className={`${styles.backdrop} ${isMenuOpen ? styles.backdropOpen : ""}`}
-          onClick={() => setIsMenuOpen(false)}
+          onClick={closeMenu}
         />
 
         <div className={`${styles.navActions} ${isMenuOpen ? styles.menuOpen : ""}`}>
           <ul className={styles.links}>
-            <li>
-              <Link
-                to="/home"
-                onClick={handleLinkClick}
-                className={location.pathname === "/home" ? styles.activeLink : styles.link}
-              >
-                {t("nav.home")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/partners"
-                onClick={handleLinkClick}
-                className={location.pathname === "/partners" ? styles.activeLink : styles.link}
-              >
-                {t("nav.partners")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/products"
-                onClick={handleLinkClick}
-                className={location.pathname === "/products" ? styles.activeLink : styles.link}
-              >
-                {t("nav.products")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                onClick={handleLinkClick}
-                className={location.pathname === "/about" ? styles.activeLink : styles.link}
-              >
-                {t("nav.about")}
-              </Link>
-            </li>
+            {NAV_ITEMS.map(({ path, labelKey }) => {
+              const isActive = location.pathname === path;
+              return (
+                <li key={path}>
+                  <Link
+                    to={path}
+                    onClick={closeMenu}
+                    className={isActive ? styles.activeLink : styles.link}
+                  >
+                    {t(labelKey)}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <div className={styles.langSwitcher}>
@@ -128,7 +98,7 @@ export default function Navbar() {
 
           <ThemeToggle />
 
-          <Link to="/contact" onClick={handleLinkClick} className={styles.submitButton}>
+          <Link to="/contact" onClick={closeMenu} className={styles.submitButton}>
             {t("nav.contact")}
           </Link>
         </div>

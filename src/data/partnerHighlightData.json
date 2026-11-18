@@ -1,0 +1,15 @@
+[
+  {
+    "partnerName": "Troge Medical GmbH",
+    "partnerUrl": "https://www.trogemedical.de/en/",
+    "logoSrc": "/images/troge-logo.png",
+    "logoAlt": "Troge Medical Hamburg Logo",
+    "subtitleKey": "partner_highlight.subtitle",
+    "badgeKey": "partner_highlight.badge",
+    "titleKey": "partner_highlight.title",
+    "descPart1Key": "partner_highlight.description_part1",
+    "descPart2Key": "partner_highlight.description_part2",
+    "ctaRoute": "/partners",
+    "ctaKey": "partner_highlight.cta"
+  }
+]

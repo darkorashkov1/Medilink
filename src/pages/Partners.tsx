@@ -1,21 +1,12 @@
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
+import partnersData from "../data/partnersData.json";
+import type { PartnerDetailItem } from "../types";
 import styles from "../styles/Partners.module.css";
 
 export default function Partners() {
   const { t } = useTranslation();
-
-  const registeredCategories = [
-    { titleKey: "partners_page.categories.exam_gloves.title", descKey: "partners_page.categories.exam_gloves.desc" },
-    { titleKey: "partners_page.categories.surg_gloves.title", descKey: "partners_page.categories.surg_gloves.desc" },
-    { titleKey: "partners_page.categories.sutures.title", descKey: "partners_page.categories.sutures.desc" },
-    { titleKey: "partners_page.categories.transfusion.title", descKey: "partners_page.categories.transfusion.desc" },
-    { titleKey: "partners_page.categories.urology.title", descKey: "partners_page.categories.urology.desc" },
-    { titleKey: "partners_page.categories.syringes.title", descKey: "partners_page.categories.syringes.desc" },
-    { titleKey: "partners_page.categories.infusion.title", descKey: "partners_page.categories.infusion.desc" },
-    { titleKey: "partners_page.categories.diagnostic.title", descKey: "partners_page.categories.diagnostic.desc" },
-    { titleKey: "partners_page.categories.surgery.title", descKey: "partners_page.categories.surgery.desc" }
-  ];
+  const partners: PartnerDetailItem[] = partnersData as PartnerDetailItem[];
 
   return (
     <div className={styles.partnersPage}>
@@ -29,41 +20,43 @@ export default function Partners() {
 
       <section className={styles.featuredSection}>
         <div className="wrapper85">
-          <div className={styles.spotlightContainer}>
-            <div className={styles.brandPanel}>
-              <div className={styles.badge}>{t("partners_page.badge")}</div>
-              <div className={styles.brandLogoWrapper}>
-                <img
-                  src="/images/troge-logo.png"
-                  alt="Troge Medical GmbH"
-                  className={styles.brandLogoImage}
-                />
+          {partners.map((partner) => (
+            <div key={partner.id} className={styles.spotlightContainer} style={{ marginBottom: "80px" }}>
+              <div className={styles.brandPanel}>
+                <div className={styles.badge}>{t(partner.badgeKey)}</div>
+                <div className={styles.brandLogoWrapper}>
+                  <img
+                    src={partner.logoSrc}
+                    alt={partner.logoAlt}
+                    className={styles.brandLogoImage}
+                  />
+                </div>
+                <p className={styles.brandOrigin}>{t(partner.originKey)}</p>
+                <p className={styles.brandBio}>{t(partner.bioKey)}</p>
+                <a
+                  href={partner.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.externalLink}
+                >
+                  {t(partner.websiteLinkKey)}
+                </a>
               </div>
-              <p className={styles.brandOrigin}>{t("partners_page.origin")}</p>
-              <p className={styles.brandBio}>{t("partners_page.brand_bio")}</p>
-              <a
-                href="https://trogemedical.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.externalLink}
-              >
-                {t("partners_page.website_link")}
-              </a>
-            </div>
 
-            <div className={styles.portfolioPanel}>
-              <h3>{t("partners_page.portfolio_title")}</h3>
-              <div className={styles.categoriesGrid}>
-                {registeredCategories.map((cat, idx) => (
-                  <div key={idx} className={styles.categoryCard}>
-                    <div className={styles.cardIndicator}></div>
-                    <h4>{t(cat.titleKey)}</h4>
-                    <p>{t(cat.descKey)}</p>
-                  </div>
-                ))}
+              <div className={styles.portfolioPanel}>
+                <h3>{t(partner.portfolioTitleKey)}</h3>
+                <div className={styles.categoriesGrid}>
+                  {partner.categories.map((cat, idx) => (
+                    <div key={idx} className={styles.categoryCard}>
+                      <div className={styles.cardIndicator}></div>
+                      <h4>{t(cat.titleKey)}</h4>
+                      <p>{t(cat.descKey)}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
