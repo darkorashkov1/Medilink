@@ -23,7 +23,6 @@ export default function About() {
       <section className={styles.contentSection}>
         <div className="wrapper85">
           <div className={styles.aboutGrid}>
-            {/* Story Card (Remains static) */}
             <div className={styles.storyCard}>
               <h2>{t("about_page.story_title")}</h2>
               <div className={styles.textBlock}>
@@ -32,7 +31,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Dynamic Partner Cards Mapped From JSON */}
             {partners.map((partner) => (
               <div key={partner.id} className={styles.partnerCard}>
                 <h2>{t(partner.titleKey)}</h2>

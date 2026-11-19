@@ -14,12 +14,11 @@ export default function PartnerHighlight() {
     <section ref={sectionRef} className={`revealOnScroll ${styles.highlightSection}`}>
       <div className="wrapper85">
         {partners.map((data, index) => (
-          <div 
-            key={index} 
+          <div
+            key={`${data.partnerName}-${index}`}
             className={styles.bannerBox}
             style={{ marginBottom: index !== partners.length - 1 ? "40px" : "0" }}
           >
-            
             <a
               href={data.partnerUrl}
               target="_blank"
@@ -28,10 +27,10 @@ export default function PartnerHighlight() {
             >
               <div className={styles.brandSlate}>
                 <div className={styles.logoWrapper}>
-                  <img 
-                    src={data.logoSrc} 
-                    alt={data.logoAlt} 
-                    className={styles.brandLogoImage} 
+                  <img
+                    src={data.logoSrc}
+                    alt={data.logoAlt}
+                    className={styles.brandLogoImage}
                   />
                 </div>
                 <p className={styles.brandSubtitle}>{t(data.subtitleKey)}</p>
